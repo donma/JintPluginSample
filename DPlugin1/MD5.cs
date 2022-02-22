@@ -21,7 +21,7 @@ namespace DPlugin1
         public string CallResult(string input)
         {
             var x = new System.Security.Cryptography.MD5CryptoServiceProvider();
-            byte[] bs = System.Text.Encoding.UTF8.GetBytes(input);
+            byte[] bs = System.Text.Encoding.UTF8.GetBytes(input+","+"當麻的鹽 DONMA's SALT");
             bs = x.ComputeHash(bs);
             var s = new System.Text.StringBuilder();
             foreach (byte b in bs)
