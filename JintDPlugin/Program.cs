@@ -16,7 +16,7 @@ namespace JintDPlugin
 
                     if (t.IsClass && t.Name == className)
                     {
-                        var ins = (Activator.CreateInstance(t) as IDplugin);
+                        var ins = (Activator.CreateInstance(t) as IDPlugin);
                         return ins.Name + "," + ins.Version;
                     }
                 }
@@ -31,7 +31,7 @@ namespace JintDPlugin
 
                     if (t.IsClass && t.Name == className)
                     {
-                        return (Activator.CreateInstance(t) as IDplugin).CallResult(input);
+                        return (Activator.CreateInstance(t) as IDPlugin).CallResult(input);
                     }
                 }
                 throw new EntryPointNotFoundException("I cant Find class.");

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace JintDPlugin
 {
-    public interface IDplugin
+    public interface IDPlugin
     {
      
         int Version { get; }
